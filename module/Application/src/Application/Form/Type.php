@@ -36,8 +36,8 @@ class Type extends Form {
             'name' => 'save',
             'attributes' => array(
                 'type' => 'submit',
-                'class' => 'btn btn-primary',
-                'value' => 'Save'
+                'class' => 'btn btn-success',
+                'value' => 'Create'
             ),
             "options" => array(
                 'label' => " ",
