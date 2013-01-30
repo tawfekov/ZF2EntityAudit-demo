@@ -36,7 +36,7 @@ class Type extends Form {
             'name' => 'save',
             'attributes' => array(
                 'type' => 'submit',
-                'class' => 'btn btn-primary btn-large',
+                'class' => 'btn btn-primary',
                 'value' => 'Save'
             ),
             "options" => array(
@@ -47,5 +47,3 @@ class Type extends Form {
     }
 
 }
-
-?>

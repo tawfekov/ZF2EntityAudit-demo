@@ -1,24 +1,32 @@
+<h1>Edit Sample Data</h1>
+
 <div class="row">
     <div class="span12">
-        <h1>Edit Sample Data</h1>
-        <?php echo $this->form()->openTag($form); ?>
-        <?php echo $this->formLabel($form->get('name')); ?>
-        <?php echo $this->formInput($form->get('name')); ?>
-        <?php echo $this->formElementErrors($form->get('name')); ?>
-        
+        <?= $this->form()->openTag($form); ?>
 
-        <?php echo $this->formLabel($form->get('tag')); ?>
-        <?php echo $this->formInput($form->get('tag')); ?>
-        <?php echo $this->formElementErrors($form->get('tag')); ?>
-        
-        
-        
-        
-        <?php echo $this->formLabel($form->get('save')); ?>
+        <?= $this->formRow($form->get('name')); ?>
+
+        <?= $this->formRow($form->get('tag')); ?>
+
+        <br>
+
         <?php echo $this->formInput($form->get('save')); ?>
-        
-        <?php
-        echo $this->form()->closeTag($form);
-        ?>
+
+        <a class="btn btn-danger confirm" href="/delete/<?= $type->getId(); ?>">
+            Delete
+        </a>
+
+        <?= $this->form()->closeTag($form); ?>
     </div>
 </div>
+
+<script>
+
+$(function() {
+    $('.confirm').on('click', function(event) {
+        return confirm('Are you sure?');
+    });
+});
+
+</script>
+
