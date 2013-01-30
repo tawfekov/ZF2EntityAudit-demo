@@ -1,13 +1,13 @@
 <div class="row">
     <div class="span6">
         <h1>Sample Data </h1>
-        <table class="table table-condensed table-bordered  table-hover table-striped">
+        <table class="table table-bordered table-hover table-striped">
             <thead>
                 <tr>
-                    <th><p>id</p></th>
-                    <th><p>name</p></th>
-                    <th><p>tag</p></th>
-                    <th><p>edit</p></th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Tag</th>
+                    <th>&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
@@ -16,7 +16,7 @@
                         <td><?= $r->getId(); ?></td>
                         <td><?= $r->getName(); ?></td>
                         <td><?= $r->getTag(); ?></td>
-                        <td><a href="<?= $this->url("edit", array("action" => "edit", "id" => $r->getId())) ?>">Edit</a></td>
+                        <td><a class="btn" href="<?= $this->url("edit", array("action" => "edit", "id" => $r->getId())) ?>">Edit</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -29,7 +29,7 @@
 
             <div class="alert alert-error">
                 <button type="button" class="close" data-dismiss="alert">×</button>
-                <p>You need to sign in to add testing data</p>
+                <p>Sign in to add sample data</p>
             </div>
             <?php else: ?>
             <h1>Add Sample Data</h1>
