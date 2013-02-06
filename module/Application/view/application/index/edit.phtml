@@ -10,11 +10,24 @@
 
         <br>
 
-        <input class="btn btn-warning" type="submit" value="Update" name="save">
+        <?= $this->formInput(
+                $form->get('save')->setAttributes(
+                    array(
+                        'value' => 'Update' ,
+                        'class' => 'btn btn-warning'
+                    )
+                )
+            ); ?>
 
-        <a class="btn btn-danger confirm" href="/delete/<?= $type->getId(); ?>">
-            Delete
-        </a>
+        <a class="btn btn-danger confirm"
+            href="<?=
+            $this->url('edit' ,
+                array(
+                    'controller' => 'index' ,
+                    'action' => 'delete' ,
+                    'id' => $type->getId()
+                )
+            ); ?>">Delete</a>
 
         <?= $this->form()->closeTag($form); ?>
     </div>
