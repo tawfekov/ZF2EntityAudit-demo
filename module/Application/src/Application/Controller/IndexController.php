@@ -34,9 +34,9 @@ class IndexController extends AbstractActionController {
         }
         $records = $em->getRepository("Application\Entity\Type")->findAll();
         return new ViewModel(array(
-                    "records" => $records,
-                    "form" => $type_form
-                ));
+            "records" => $records,
+            "form" => $type_form
+        ));
     }
 
     public function editAction() {
