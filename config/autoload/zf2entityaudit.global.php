@@ -10,6 +10,7 @@ return array(
             'page.limit'    => '20'
         ),
         'zfcuser.integration' => true,
+	'zfcuser.entity_class' => 'ZfcUser\Entity\User'
     ),
 );
 
